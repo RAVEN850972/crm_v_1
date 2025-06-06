@@ -38,7 +38,7 @@
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
             transition: all 0.3s ease;
-            z-index: 1000;
+            z-index: 1060;
             overflow-y: auto;
         }
 
@@ -185,11 +185,13 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            pointer-events: none;
         }
         
         .sidebar-overlay.show {
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
         }
         
         .breadcrumb-nav {

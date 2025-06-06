@@ -401,21 +401,23 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .sidebar {
-                transform: translateX(-100%);
+                transform: translateX(-100%); /* Скрыт по умолчанию */
+                width: 280px !important;
+                z-index: 1050; /* Увеличен z-index */
             }
-
-            .sidebar.show {
-                transform: translateX(0);
+        
+            .sidebar.mobile-open {
+                transform: translateX(0); /* Показываем при открытии */
             }
-
+        
             .main-content {
-                margin-left: 0;
+                margin-left: 0 !important;
             }
-
-            .main-content.expanded {
-                margin-left: 0;
+        
+            .sidebar-toggle {
+                display: block; /* Показываем кнопку */
             }
         }
 
